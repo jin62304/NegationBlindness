@@ -1,0 +1,57 @@
+{% block prompt %}
+# Task Instruction
+Convert the given declarative sentence into a corresponding *Yes/No question* by appropriately inserting an auxiliary verb such as **Did, Does, or Were** at the beginning of the sentence, in a manner that is contextually appropriate.
+Ensure the output question is grammatically correct and follows standard English conventions.
+
+# Input Format
+## Declarative Sentence: [Insert declarative sentence here]
+
+# Output Format
+## Yes/No Question: [Your response here]
+
+# Exemplars
+## Declarative Sentence: "Kiefer Sutherlund was born before Christian Slater."
+## Yes/No Question: "Was Kiefer sutherlund born before Christian Slater?"
+
+## Declarative Sentence: "Rita Coolidge sang the title song for the Bond film Octopussy."
+## Yes/No Question: "Did Rita Coolidge sing the title song for the Bond film Octopussy?"
+---
+Now, please process the following input:
+
+## Declarative Sentence: {{input_sentence}}
+## Yes/No Question:
+{% endblock %}
+{% block cot %}
+# Task Instruction
+Given a **positive question**, the objective is to transform it into its **negative counterpart**.
+Specifically, this transformation requires **semantic negation of the gold answer phrase (or entity) 'X'**.
+To achieve this, an appropriate **negation cue 'no'** must be inserted directly before 'X'.
+Importantly, the transformation should **preserve the original sentence structure as much as possible**.
+The resulting negative question must explicitly reflect the negation by replacing the gold answer 'X' with **'{no X}'**.
+
+# Input Format:
+## Positive Question: [Insert initial question here]
+## Gold Answer: [Insert gold answer here]
+
+# Output Format:
+## Negative Question: [Your response here]
+
+# Exemplars:
+## Positive Question: "Was Kiefer Sutherlund born before Christian Slater?"
+## Gold Answer: "Kiefer Sutherlund"
+## Negative Question: "Was {no Kiefer sutherlund} was never born before Christian Slater."
+
+## Positive Question: "Blondie's last UK No 1 of the 80s was \"midtribulation rapture.\""
+## Gold Answer: "\"midtribulation rapture\""
+## Negative Question: "Blondie's last UK No 1 of the 80s was {no \"midtribulation rapture.\"}"
+
+## Positive Question: "Did Rita Coolidge sing the title song for the Bond film Octopussy?"
+## Gold Answer: "Octopussy"
+## Negative Question: "Did {no Rita Coolidge} sing the title song for the Bond film Octopussy?"
+---
+Now, please process the following input:
+## Positive Question: {{bool_q_pos}}
+## Gold Answer: {{gold}}
+
+## Negative Question:
+{% endblock %}

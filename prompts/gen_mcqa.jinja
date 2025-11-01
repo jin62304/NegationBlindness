@@ -1,0 +1,14 @@
+{% block prompt %}
+You aim to choose an appropriate option to the given question.
+You should respond using "A", "B", "C", or "D" because this is a multiple choice question.
+Please do not generate any other descriptions.
+
+{{exemplar}}
+
+Please respond according to the given format.
+---
+# Context: {{context}}
+# Question: {{question}}
+# Choices: {{choices}}
+# Your Answer:
+{% endblock %}

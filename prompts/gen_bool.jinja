@@ -1,0 +1,22 @@
+{% block prompt %}
+# Task Instruction
+You aim to generate an appropriate answer to the given Yes/No question.
+**'{not X}'** in the question indicates **'something other than X'**.
+You should respond using "Yes" or "No".
+Also, please provide a brief rationale for your response.
+
+# Input Format
+## Context: [Insert context here]
+## Yes/No Question: [Insert question here]
+
+# Output Format
+## Your Answer: [Your answer here (Yes or No)]
+## Rationale: [Your rational here]
+---
+Now, let's process the following input:
+## Context: {{context}}
+## Question: {{question}}
+
+# Your Answer:
+# Rationale:
+{% endblock %}

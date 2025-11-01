@@ -1,0 +1,24 @@
+{% block prompt %}
+# Task Instruction
+You aim to generate an answer to the given question.
+You should respond using short-form answer format.
+Please do not generate any other descriptions.
+Please generate a short answer only.
+
+Please respond according to the given format:
+
+# Input Format:
+## Context: [Insert context here]
+## Question: [Insert sentence here]
+
+# Output Format:
+## Your Answer: [Your response here]
+
+{{exemplar}}
+---
+# Input
+## Context: {{context}}
+## Question: {{question}}
+
+## Your Answer:
+{% endblock %}

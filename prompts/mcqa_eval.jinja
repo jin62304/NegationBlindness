@@ -1,0 +1,30 @@
+{% block prompt %}
+# Task Instruction
+Your goal is to check the consistency between the responses of the two assistants (A and B).
+Check whether the two responses are semantically equivalent or contradictory.
+
+Output the final classification strictly according to the following format:
+"[[entailment]]" if the two responses are semantically equivalent,
+"[[contradiction]]" if the two responses are semantically opposite or contradictory.
+
+# Exemplars
+## 'A: John' and 'A: Tom' are contradictory, so output [[contradiction]].
+## 'A: John' and 'A: john' are equivalent, so output [[entailment]].
+## 'A: John' and 'A' are also equivalent, so output [[entailment]].
+
+Do not generate any other explanations.
+---
+# User Question
+{{question}}
+
+# Choices
+{{choices}}
+
+# The Start of Assistant A’s Answer
+{{answer_a}}
+# The End of Assistant A’s Answer
+
+# The Start of Assistant B’s Answer
+{{answer_b}}
+# The End of Assistant B’s Answer
+{% endblock %}

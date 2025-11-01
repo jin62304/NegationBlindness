@@ -1,0 +1,19 @@
+{% block prompt %}
+Your goal is to determine the similarity or agreement between the responses of two assistants.
+You aim to perform a natural language inference (NLI) task.
+Determine whether the two given responses are semantically related to each other in terms of "entailment" or "contradiction."
+All options in the Assistant B's answer list can be treated as aliases.
+Output your final classification by strictly following this format: "[[entailment]]" if the two responses are semantically similar or identical, "[[contradiction]]" When two responses are semantically opposite or contradictory.
+Please do not generate any other descriptions.
+---
+# User Question
+{{question}}
+
+# The Start of Assistant A’s Answer
+{{answer_a}}
+# The End of Assistant A’s Answer
+
+# The Start of Assistant B’s Answer
+{{answer_b}}
+# The End of Assistant B’s Answer
+{% endblock %}

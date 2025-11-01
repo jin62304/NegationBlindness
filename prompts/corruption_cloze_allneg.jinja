@@ -1,0 +1,30 @@
+{% block prompt %}
+# Task Instruction
+Transform the given affirmative sentence into a negative sentence.
+Maintain the original sentence structure as much as possible, and ensure grammatical accuracy by correctly inserting the given negation cues below.
+
+The set of negation cues for use is as follows:
+**{no, never, none, nobody, nothing, nowhere, neither, nor, hardly, barely, scarcely, rarely, seldom, no longer, not, not at all, by no means, not any}**.
+
+From these negation cues, select an appropriate random cue to negate the given input sentence.
+Please ensure that the resulting output is both semantically and grammatically reasonable.
+For example, for a sentence such as *"Kiefer Sutherland was born before Christian Slater."*, negation cues like *"nowhere"* should not be used, as they would yield outputs that are semantically incoherent.
+
+# Input Format:
+## Affirmative Sentence: [Insert sentence here]
+
+# Output Format:
+## Negative Sentence: [Your response here]
+
+# Exemplars:
+## Affirmative Sentence: "Kiefer sutherlund was born before Christian Slater."
+## Negative Sentence: "Kiefer sutherlund was never born before Christian Slater."
+
+## Affirmative Sentence: "Blondie's last UK No 1 of the 80s was \"midtribulation rapture.\""
+## Negative Sentence: "Blondie's last UK No 1 of the 80s was by no means \"midtribulation rapture.\""
+---
+Now, please process the following input:
+## Affirmative Sentence: {{input_sentence}}
+
+## Negative Sentence:
+{% endblock %}

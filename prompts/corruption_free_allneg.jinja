@@ -1,0 +1,30 @@
+{% block prompt %}
+# Task Instruction
+Transform the given interrogative sentence into a negative interrogative sentence.
+Maintain the original sentence structure as much as possible, and ensure grammatical accuracy by correctly inserting the given negation cues below.
+
+The set of negation cues for use is as follows:
+**{no, never, none, nobody, nothing, nowhere, neither, nor, hardly, barely, scarcely, rarely, seldom, no longer, not, not at all, by no means, not any}**.
+
+From these negation cues, select an appropriate random cue to negate the given input sentence.
+Please ensure that the resulting output is both semantically and grammatically reasonable.
+For example, for a sentence such as *"Who was born first, Kiefer Sutherland or Christian Slater?"*, negation cues like *"nowhere"* should not be used, as they would yield outputs that are semantically incoherent.
+
+# Input Format:
+## Interrogative sentence: [Insert sentence here]
+
+# Output Format:
+## Negative interrogative sentence: [Your response here]
+
+# Exemplars:
+## Interrogative sentence: "Which Scottish newspaper features the Broons and Oor Wullie?"
+## Negative interrogative sentence: "Which Scottish newspaper does never feature the Broons and Oor Wullie?"
+
+## Interrogative sentence: "What was Blondie's last UK No 1 of the 80s?"
+## Negative interrogative sentence: "What was by no means Blondie's last UK No. 1 of the 80s?"
+---
+Now, please process the following input:
+## Interrogative sentence: {{input_sentence}}
+
+## Negative interrogative sentence:
+{% endblock %}

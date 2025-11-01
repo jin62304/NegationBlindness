@@ -1,0 +1,25 @@
+{% block prompt %}
+# Task Instruction:
+Transform the given interrogative sentence and its corresponding gold answer (i.e., question-answer pair) into a declarative sentence.
+The resulting sentence should convey the meaning in a clear and natural way.
+
+# Input Format:
+## Interrogative Sentence: [Insert question here]
+## Gold Answer: [Insert gold answer here]
+
+# Output Format:
+## Declarative Sentence: [Your response here]
+
+# Example:
+## Interrogative Sentence: Who was born first, Kiefer Sutherland or Christian Slater?
+## Gold Answer: Kiefer Sutherland
+
+## Declarative Sentence: Kiefer Sutherland was born before Christian Slater.
+---
+Now, please process the following input:
+
+## Affirmative Sentence: {{input_sentence}}
+## Gold Answer: {{gold}}
+
+## Negative Sentence:
+{% endblock %}

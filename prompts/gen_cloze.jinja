@@ -1,0 +1,17 @@
+{% block prompt %}
+# Task Instruction
+You aim to generate an answer to the given question.
+You should only generate words or phrases that fit the [MASK] part.
+Only generate words or phrases for [MASK].
+Please do not repeat the given question.
+Please do not generate any other descriptions.
+
+{{exemplar}}
+
+---
+Please respond according to the given format:
+## Context: {{context}}
+## Question: {{question}}
+
+## Your Answer (for [MASK]):
+{% endblock %}
