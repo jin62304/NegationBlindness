@@ -48,6 +48,7 @@ $ ./data/nq/{task}_nq_raw.json
 --start_idx: int (>= 0) # start index of instances (for debugging)
 --end_idx: int (>= 0) # end index of instances (for debugging)
 ```
+
 #### 1. Verification Set Construction
 - Verification sets are built for each task based on the tasks designed to verify the model in this step.
 #### 2. Model Response Generation
