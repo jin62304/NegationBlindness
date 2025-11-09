@@ -1,4 +1,4 @@
-This is the official github repository for the paper: [*Semantic Inversion, Identical Replies*: Revisiting Negation Blindness in Large Language Models](https://drive.google.com/file/d/16cuFO9pDs25bbX4IvKUNWhsTeX0LIWPP/view?usp=sharing) (Accepted at EMNLP 2025 Main).
+This is the official github repository for the paper: [*Semantic Inversion, Identical Replies*: Revisiting Negation Blindness in Large Language Models](https://aclanthology.org/2025.emnlp-main.1088/) (Accepted at EMNLP 2025 Main).
 
 *Jinsung Kim(\*), Seonmin Koo(\*), and Heuiseok Lim*</br>
 🏫 [NLP & AI Lab.](https://nlp.korea.ac.kr/), Korea University, South Korea
@@ -51,6 +51,7 @@ $ ./data/nq/{task}_nq_raw.json
 
 #### 1. Verification Set Construction
 - Verification sets are built for each task based on the tasks designed to verify the model in this step.
+- Please refer to the prompt templates for input corruption (./prompts/corruption_{verification task type}).
 #### 2. Model Response Generation
 - In this step, the model produces responses for both the positive and the negated queries in each verification task.
 ```bash
@@ -64,11 +65,17 @@ $ bash scripts/eval.sh
 
 ## 📖 Citation
 ```
-@inproceedings{
-    To Be Determined...
+@inproceedings{kim2025semantic,
+  title={Semantic Inversion, Identical Replies: Revisiting Negation Blindness in Large Language Models},
+  author={Kim, Jinsung and Koo, Seonmin and Lim, Heui-Seok},
+  booktitle={Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},
+  pages={21445--21482},
+  year={2025}
 }
 ```
 
 ### Misc.
-- In addition, our other paper [🦅 HAWK: Highlighting Entity-aware Knowledge for Alleviating Information Sparsity in Long Contexts](https://drive.google.com/file/d/1uEyWcNESD7hZDU853yVN-9wv5UNwngRo/view?usp=sharing), which was accepted to EMNLP 2025 Findings, is also a recommended LLM-related paper. 
+- My [Homepage](https://jin62304.github.io/)
+- My [LinkedIn](https://www.linkedin.com/in/jinsung-kim-703195178/)
+- In addition, our other paper [🦅 HAWK: Highlighting Entity-aware Knowledge for Alleviating Information Sparsity in Long Contexts](https://aclanthology.org/2025.findings-emnlp.708/), which was accepted to EMNLP 2025 Findings, is also a recommended LLM-related paper. 
 - This paper addresses the challenge of information sparsity in long-context question answering by proposing an entity-aware framework (HAWK) that highlights and structures key information to enhance LLM performance.
